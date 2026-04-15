@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyPhone Togo Accueil</title>
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/TYZyM8F4/Whats-App-Image-2026-04-12-at-15-49-39.jpg">
+    <link rel="stylesheet" href="SBoutique.css">
+</head>
+<body>
+    <header>
+        <div class="header-bg-animation">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        
+        <div class="header-content">
+            <h1>BIENVENUE DANS EASYPHONE</h1>
+            <img src="https://i.postimg.cc/TYZyM8F4/Whats-App-Image-2026-04-12-at-15-49-39.jpg" class="logo" alt="Logo EasyPhone">
+            <h2>Commande ton téléphone facilement et à petit prix</h2>
+            <div class="filter-container">
+                <button class="filter-btn" onclick="filtrerMarque('iPhone')">iPhone</button>
+                <button class="filter-btn active" onclick="filtrerMarque('Tous')">Tous</button>
+                <button class="filter-btn" onclick="filtrerMarque('Samsung')">Samsung</button>
+                <button class="filter-btn" onclick="filtrerMarque('Tecno')">Tecno</button>
+                <button class="filter-btn" onclick="filtrerMarque('Infinix')">Infinix</button>
+                <button class="filter-btn" onclick="filtrerMarque('Pixel')">Pixel</button>
+                <button class="filter-btn" onclick="filtrerMarque('Redmi')">Redmi</button>
+                <button class="filter-btn" onclick="filtrerMarque('Xiaomi')">Xiaomi</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="commander" class="form-container">
+        <div id="formulaire" class="form-card">
+            <input id="tel" placeholder="Sélectionnez un téléphone ci-dessous" class="input-field" readonly>
+            <textarea id="msg" placeholder="Détails de ton besoin (Couleur, état...)" class="input-field text-area"></textarea>
+            
+            <div class="payment-box">
+                <h3>Type de contrat</h3>
+                <div class="radio-group">
+                    <label><input type="radio" name="Paiement" value="Cash" checked onclick="updatePaymentOptions()"> Paiement Cash</label>
+                    <label><input type="radio" name="Paiement" value="Tranches" onclick="updatePaymentOptions()"> Par Tranches (3 mois)</label>
+                </div>
+            </div>
+
+            <div id="paymentMethods" class="method-section">
+                <h3 id="methodTitle">Règlement par :</h3>
+                <div class="radio-group">
+                    <label><input type="radio" name="method" value="TMoney" checked> TMoney</label>
+                    <label><input type="radio" name="method" value="Flooz"> Flooz</label>
+                    <label id="cashOption"><input type="radio" name="method" value="Espèces"> Espèces (Livraison)</label>
+                </div>
+            </div>
+
+            <button onclick="envoyer()" class="btn-whatsapp">COMMANDER SUR WHATSAPP</button>
+        </div>
+    </section>
+
+    <div class="search-bar-container">
+        <input type="text" id="searchInput" placeholder="Rechercher un modèle (ex: iPhone 13, Spark...)" onkeyup="filtrerProduits()">
+    </div>
+
+    <div id="products-grid" class="products-container">
+        </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>EASYPHONE TOGO</h4>
+                <p>Des téléphones de qualité à des prix qui battent toute la concurrence.</p>
+                <div class="social-links">
+                    <a href="https://www.tiktok.com/@nolieded?_r=1&_t=ZN-95Tsv9S0yog">Notre TikTok</a>
+                </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>LIENS UTILES</h4>
+            <ul>
+                <li><a href="#searchInput" onclick="window.scrollTo(0,0)">Rechercher un modèle</a></li>
+                <li><a href="#formulaire">Comment commander ?</a></li>
+                <li><a href="Conditions.html">Conditions de paiement</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>NOUS TROUVER</h4>
+            <p>Tel: +228 99 62 61 80</p>
+            <p>Tel: +228 70 90 19 63</p>
+            <p>horaire: Ouvert 24/24h & 7/7j</p>
+        </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EasyPhone Togo. Tous droits réservés. Développé avec expertise.</p>
+        </div>
+    </footer>
+
+    <script src="JBoutique.js"></script>
+</body>
+</html>
